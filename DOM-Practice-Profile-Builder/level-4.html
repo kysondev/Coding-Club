@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Level 4 - Mini Profile Card</title>
+    <style>
+      body {
+        font-family: Arial;
+        padding: 20px;
+        display: flex;
+        gap: 30px;
+      }
+
+      #form {
+        width: 260px;
+        padding: 20px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      input,
+      select {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        margin-top: 5px;
+        box-sizing: border-box;
+      }
+
+      #card {
+        width: 260px;
+        padding: 20px;
+        background: white;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      #avatar {
+        width: 80px;
+        height: 80px;
+        background: gray;
+        border-radius: 50%;
+        margin: 0 auto 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- FORM -->
+    <div id="form">
+      <h2>Edit Profile</h2>
+
+      <label>Name:</label>
+      <input id="name-input" placeholder="Enter name" />
+
+      <label>Favorite Animal:</label>
+      <select id="animal-select">
+        <option value="" disabled selected>Select one</option>
+        <option>Cat</option>
+        <option>Dog</option>
+        <option>Fox</option>
+        <option>Bird</option>
+      </select>
+
+      <label>Background Color:</label>
+      <input type="color" id="color-input" />
+    </div>
+
+    <!-- PREVIEW CARD -->
+    <div id="card">
+      <div id="avatar"></div>
+      <h2 id="preview-name">Your Name</h2>
+      <p id="preview-animal">Favorite Animal: (none)</p>
+    </div>
+
+    <script>
+      /******************************************
+      TODO:
+      - Make name update live
+      - Make animal selection update text
+      - Make color input update card background
+    ******************************************/
+    </script>
+  </body>
+</html>

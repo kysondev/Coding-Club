@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Level 3 - Tag Selector</title>
+    <style>
+      body {
+        font-family: Arial;
+        padding: 20px;
+      }
+      .tag {
+        display: inline-block;
+        padding: 6px 12px;
+        margin: 5px;
+        border-radius: 6px;
+        background: #ddd;
+        cursor: pointer;
+        user-select: none;
+      }
+      .selected {
+        background: #6a95ff;
+        color: white;
+      }
+      #chosen {
+        margin-top: 20px;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Level 3 – Tag Selector</h1>
+
+    <div id="tag-container">
+      <span class="tag">Math</span>
+      <span class="tag">Science</span>
+      <span class="tag">Art</span>
+      <span class="tag">History</span>
+      <span class="tag">Music</span>
+    </div>
+
+    <h3>Chosen Tags:</h3>
+    <div id="chosen"></div>
+
+    <script>
+      /******************************************
+      TODO:
+      - When a .tag is clicked, toggle "selected"
+      - Update #chosen with selected tag names
+    ******************************************/
+    </script>
+  </body>
+</html>

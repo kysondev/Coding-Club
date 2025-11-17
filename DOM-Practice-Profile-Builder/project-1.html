@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tutoring App - Profile Builder</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        background: #f7f7f7;
+        display: flex;
+        gap: 30px;
+      }
+
+      /* ----- Left Form Panel ----- */
+      #form-panel {
+        background: white;
+        padding: 20px;
+        border-radius: 12px;
+        width: 320px;
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+      }
+
+      #form-panel h1 {
+        margin-top: 0;
+      }
+
+      label {
+        font-weight: bold;
+        display: block;
+        margin-top: 15px;
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 8px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        margin-top: 5px;
+        font-size: 15px;
+      }
+
+      textarea {
+        resize: none;
+      }
+
+      /* ----- Subject Tags ----- */
+      .subject-tag {
+        display: inline-block;
+        padding: 6px 12px;
+        border-radius: 8px;
+        margin: 4px;
+        cursor: pointer;
+        background: #e0e0e0;
+        user-select: none;
+        transition: 0.2s;
+      }
+
+      .subject-tag:hover {
+        background: #c7d9ff;
+      }
+
+      .selected {
+        background: #6a95ff;
+        color: white;
+      }
+
+      /* ----- Profile Preview Card ----- */
+      #profile-preview {
+        width: 300px;
+        padding: 25px;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+        text-align: center;
+        height: fit-content;
+      }
+
+      #avatar {
+        width: 90px;
+        height: 90px;
+        background: gray;
+        border-radius: 50%;
+        margin: 0 auto 15px auto;
+        border: 3px solid #ddd;
+      }
+
+      #preview-name {
+        font-size: 22px;
+        margin: 10px 0;
+      }
+
+      #preview-grade,
+      #preview-bio {
+        margin: 5px 0;
+        color: #555;
+      }
+
+      #preview-subjects span {
+        background: #eef;
+        padding: 4px 8px;
+        border-radius: 6px;
+        margin: 3px;
+        display: inline-block;
+        font-size: 13px;
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- FORM PANEL -->
+    <div id="form-panel">
+      <h1>Profile Builder</h1>
+
+      <!-- NAME -->
+      <label>Name:</label>
+      <input id="name-input" placeholder="Enter your name" />
+
+      <!-- GRADE -->
+      <label>Grade:</label>
+      <select id="grade-select">
+        <option value="" disabled selected>Select your grade</option>
+        <option>6th</option>
+        <option>7th</option>
+        <option>8th</option>
+        <option>9th</option>
+        <option>10th</option>
+        <option>11th</option>
+        <option>12th</option>
+      </select>
+
+      <!-- BIO -->
+      <label>Bio:</label>
+      <textarea
+        id="bio-input"
+        placeholder="Write something about yourself..."
+        rows="3"
+      ></textarea>
+
+      <!-- AVATAR COLOR -->
+      <label>Avatar Color:</label>
+      <input type="color" id="avatar-color" />
+
+      <!-- SUBJECTS -->
+      <label>Favorite Subjects:</label>
+      <div id="subjects-container">
+        <span class="subject-tag">Math</span>
+        <span class="subject-tag">Science</span>
+        <span class="subject-tag">History</span>
+        <span class="subject-tag">English</span>
+        <span class="subject-tag">Computer Science</span>
+      </div>
+    </div>
+
+    <!-- PREVIEW CARD -->
+    <div id="profile-preview">
+      <div id="avatar"></div>
+      <h2 id="preview-name">Your Name</h2>
+      <p id="preview-grade">Grade: ?</p>
+      <p id="preview-bio">Bio goes here...</p>
+      <h4>Favorite Subjects:</h4>
+      <div id="preview-subjects"></div>
+    </div>
+
+    <script>
+      /*********************************************
+
+     1. NAME
+        When the user types in #name-input,
+        update #preview-name in real time.
+
+     2. GRADE
+        When the user picks a grade from #grade-select,
+        update #preview-grade.
+
+     3. BIO
+        When the user types in #bio-input,
+        update #preview-bio.
+
+     4. AVATAR COLOR
+        When the user changes #avatar-color,
+        change the #avatar background color.
+
+     5. SUBJECT TAG SELECTOR
+        When a .subject-tag is clicked:
+          - toggle the "selected" class
+          - update #preview-subjects with selected subjects
+
+    **********************************************/
+    </script>
+  </body>
+</html>

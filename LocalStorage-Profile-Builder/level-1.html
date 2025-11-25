@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LocalStorage Level 1 - Welcome Message</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        max-width: 450px;
+      }
+
+      #welcome {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      input {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+      }
+
+      button {
+        padding: 8px 14px;
+        margin-right: 8px;
+        border: none;
+        border-radius: 6px;
+        background: #2563eb;
+        color: white;
+        font-size: 15px;
+        cursor: pointer;
+      }
+
+      #clear-btn {
+        background: #d9534f;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 id="welcome">Welcome! Please enter your name.</h1>
+
+    <input id="name-input" placeholder="Enter your name..." />
+
+    <div>
+      <button id="set-btn">Set Name</button>
+      <button id="clear-btn">Clear</button>
+    </div>
+
+    <script>
+      /******************************************
+       TODO:
+
+       Goal:
+         - When user enters a name and clicks "Set Name",
+           show "Welcome, NAME!" and save it to localStorage.
+
+         - On refresh, automatically show the saved name.
+
+         - When user clicks "Clear":
+             - Remove name from localStorage
+             - Clear input
+             - Reset welcome text
+
+       Steps:
+         1. Get elements (#name-input, #set-btn, #clear-btn, #welcome)
+
+         2. Write a function updateWelcome(name)
+            - If name exists: show "Welcome, NAME!"
+            - If not: show default welcome message
+
+         3. Set button:
+            - Read input value
+            - Save to localStorage
+            - Call updateWelcome(name)
+
+         4. Clear button:
+            - Remove from localStorage
+            - Reset input + welcome text
+
+         5. On page load:
+            - Check if "ls-username" exists in localStorage
+            - Call updateWelcome(savedName)
+      ******************************************/
+    </script>
+  </body>
+</html>

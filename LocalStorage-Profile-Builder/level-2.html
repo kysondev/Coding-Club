@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LocalStorage Level 2 - Remember Your Color</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        max-width: 450px;
+      }
+
+      h1 {
+        margin-bottom: 20px;
+      }
+
+      #color-input {
+        width: 120px;
+        height: 45px;
+        cursor: pointer;
+      }
+
+      #box {
+        width: 150px;
+        height: 150px;
+        background: gray;
+        border-radius: 10px;
+        margin-top: 20px;
+        border: 2px solid #ccc;
+      }
+
+      button {
+        margin-top: 10px;
+        padding: 8px 14px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        background: #2563eb;
+        color: white;
+        font-size: 15px;
+        margin-right: 8px;
+      }
+
+      #clear-btn {
+        background: #d9534f;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>LocalStorage Level 2<br />Remember Your Color</h1>
+
+    <p>
+      Pick a color. The box will update immediately. When you click save, it
+      will remember your color next time.
+    </p>
+
+    <input type="color" id="color-input" />
+
+    <div>
+      <button id="save-btn">Save Color</button>
+      <button id="clear-btn">Clear Saved Color</button>
+    </div>
+
+    <div id="box"></div>
+
+    <script>
+      /******************************************
+      TODO:
+
+      Goal:
+        - Choose a color -> box updates live
+        - Save -> box remembers after refresh
+        - Clear -> remove saved color
+
+      Steps:
+        1. Get elements:
+           - #color-input
+           - #box
+           - #save-btn
+           - #clear-btn
+
+        2. When #color-input changes:
+           - Update #box background
+
+        3. When "Save Color" is clicked:
+           - Save the color to localStorage as "ls-color"
+
+        4. When "Clear Saved Color" is clicked:
+           - Remove "ls-color" from storage
+           - Reset box to gray
+
+        5. On page load:
+           - If "ls-color" exists:
+               - Set #color-input value
+               - Update #box background
+      ******************************************/
+    </script>
+  </body>
+</html>

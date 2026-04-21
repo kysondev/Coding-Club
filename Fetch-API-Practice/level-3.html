@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fetch Level 3 - User List</title>
+    <style>
+      body {
+        font-family: Arial;
+        padding: 40px;
+      }
+      header {
+        border-bottom: 2px solid black;
+        padding-bottom: 20px;
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      #user-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+      }
+      .user-card {
+        border: 1px solid black;
+        padding: 20px;
+        background: #fff;
+      }
+      .user-card h3 {
+        margin: 0;
+        color: blue;
+      }
+      button {
+        padding: 10px 20px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>User Directory</h1>
+      <button id="load-users">Load Users</button>
+    </header>
+
+    <div id="user-grid">
+      <!-- Example Card (Students will generate cards like this) -->
+      <div class="user-card">
+        <h3>Leanne Graham</h3>
+        <p>Sincere@april.biz</p>
+        <p><b>Company:</b> Romaguera-Crona</p>
+      </div>
+    </div>
+
+    <script>
+      /******************************************
+      TODO:
+      1. Fetch: https://jsonplaceholder.typicode.com/users
+      2. For each user, create a .user-card
+      3. Show Name, Email, and Company Name
+    ******************************************/
+    </script>
+  </body>
+</html>

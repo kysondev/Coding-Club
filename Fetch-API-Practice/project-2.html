@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Wiki Research Tool</title>
+    <style>
+      body {
+        font-family: "Times New Roman", Times, serif;
+        background-color: #f4f1ea;
+        padding: 50px;
+        color: #333;
+      }
+      .notebook {
+        max-width: 700px;
+        margin: auto;
+        background: white;
+        padding: 50px;
+        border-left: 10px solid #8b0000;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+        min-height: 400px;
+      }
+      header {
+        border-bottom: 2px solid #333;
+        margin-bottom: 30px;
+        padding-bottom: 10px;
+      }
+      h1 {
+        margin: 0;
+        font-size: 32px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+      .search-container {
+        display: flex;
+        gap: 0;
+        margin-bottom: 40px;
+      }
+      input {
+        flex: 1;
+        padding: 12px;
+        border: 2px solid #333;
+        font-size: 16px;
+        outline: none;
+      }
+      button {
+        padding: 12px 25px;
+        background: #333;
+        color: white;
+        border: 2px solid #333;
+        cursor: pointer;
+        font-weight: bold;
+      }
+      button:hover {
+        background: #555;
+      }
+
+      #result-area {
+        display: none;
+      }
+      #wiki-title {
+        font-size: 28px;
+        margin-bottom: 15px;
+        color: #8b0000;
+      }
+      #wiki-img {
+        float: right;
+        width: 200px;
+        margin-left: 20px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        padding: 5px;
+        background: #fff;
+      }
+      #wiki-extract {
+        line-height: 1.6;
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+      #wiki-link {
+        display: inline-block;
+        color: #8b0000;
+        font-weight: bold;
+        text-decoration: none;
+        border-bottom: 1px solid #8b0000;
+      }
+      #wiki-link:hover {
+        color: black;
+        border-color: black;
+      }
+
+      #status {
+        font-style: italic;
+        color: #666;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="notebook">
+      <header>
+        <h1>Research Assistant</h1>
+        <p>Enter a topic to get a quick summary from Wikipedia.</p>
+      </header>
+
+      <div class="search-container">
+        <input
+          type="text"
+          id="search-input"
+          placeholder="e.g., Photosynthesis, Leonardo da Vinci, Mars..."
+        />
+        <button id="search-btn">Search</button>
+      </div>
+
+      <div id="status"></div>
+
+      <div id="result-area">
+        <img id="wiki-img" src="" alt="Topic Image" />
+        <h2 id="wiki-title"></h2>
+        <p id="wiki-extract"></p>
+        <a id="wiki-link" href="" target="_blank">Read Full Article &rarr;</a>
+      </div>
+    </div>
+
+    <script>
+      /**
+      Your goal is to build a research tool that fetches data from 
+      Wikipedia's public API.
+
+      TODO:
+      1. When #search-btn is clicked:
+      2. Get the value from #search-input.
+      3. Handle spaces: Wikipedia URLs use underscores instead of spaces.
+         HINT: Use .split(' ').join('_') or .replaceAll(' ', '_')
+      
+      4. Fetch from this URL:
+         https://en.wikipedia.org/api/rest_v1/page/summary/YOUR_TOPIC
+         
+      5. Update the UI:
+         - Show #result-area
+         - Set #wiki-title to data.title
+         - Set #wiki-extract to data.extract
+         - Set #wiki-link href to data.content_urls.desktop.page
+         - Set #wiki-img src to data.thumbnail.source (Careful: check if it exists first!)
+         
+      **/
+    </script>
+  </body>
+</html>
